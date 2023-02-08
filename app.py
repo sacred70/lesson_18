@@ -36,7 +36,7 @@ def create_data(app, db):
 
 
         with db.session.begin():
-            db.session.add_all(здесь список созданных объектов)
+            db.session.add_all("""здесь список созданных объектов""")
 
 
 app = create_app(Config())
