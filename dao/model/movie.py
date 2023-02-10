@@ -2,7 +2,7 @@ from setup_db import db
 from marshmallow import Schema, fields
 
 
-# Модель фильма и схема сериализации
+"""Модель фильма и схема сериализации"""
 class Movie(db.Model):
     __tablename__ = 'movie'
     id = db.Column(db.Integer, primary_key=True)
