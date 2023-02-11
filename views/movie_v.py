@@ -1,7 +1,7 @@
 from flask import request
 from flask_restx import Namespace, Resource
 
-from dao.model.movie import MovieScheme
+from dao.model.movie_m import MovieScheme
 from implemented import movie_service
 
 movies_ns = Namespace('movies')
@@ -10,6 +10,8 @@ movies_scheme = MovieScheme(many=True)
 
 
 """Представления для фильмов: получение всех фильмов, фильмов по фильтрам, добавление нового фильма"""
+
+
 @movies_ns.route('/')
 class MoviesView(Resource):
     def get(self):
@@ -27,7 +29,9 @@ class MoviesView(Resource):
         return '', 201, {'location': f'movies/{add_movie.id}'}
 
 
-"""Представления для получения фильма по Id, обновления фильма, удаления фильма"""
+"""Представления для получения фильма по id, обновления фильма, удаления фильма"""
+
+
 @movies_ns.route('/<int:mid>/')
 class MovieView(Resource):
     def get(self, mid):

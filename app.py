@@ -2,9 +2,9 @@ from flask import Flask
 from flask_restx import Api
 from config import Config
 from setup_db import db
-from views.movies import movies_ns
-from views.directors import director_ns
-from views.genres import genre_ns
+from views.movie_v import movies_ns
+from views.director_v import director_ns
+from views.genre_v import genre_ns
 
 
 def create_app(config_object):
