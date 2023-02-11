@@ -9,6 +9,8 @@ directors_scheme = DirectorScheme(many=True)
 
 
 """Представления для получения всех режиссеров и режиссера по id"""
+
+
 @director_ns.route('/')
 class DirectorsView(Resource):
     def get(self):
